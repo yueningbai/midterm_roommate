@@ -1,0 +1,7 @@
+.bg{
+    height:500px;
+    margin:0px;
+    padding:0px;
+    background:url("/images/widepic.jpg") no-repeat center fixed;
+    background-size:100% 100%;
+}

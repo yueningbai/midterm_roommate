@@ -1,0 +1,49 @@
+<div class="container" style="width:70%">
+	    
+	    <h3 ><span class="glyphicon glyphicon-heart"></span> Find One!</h3>
+	      
+		<div class="col-md-5 " >
+			<div class="panel panel-warning">
+				<div class="panel-heading">
+					<h3 class="panel-title">Personal info</h3>
+				</div>
+				<div class="panel-body">
+					<ul>
+					  <li>Username: <strong>{{name}}</strong></li>
+					  <li>Age: <strong>{{age}}</strong></li>
+					  <li>Gender: <strong>{{gender}}</strong></li>
+					  <li>Occupation: <strong>{{occupation}}</strong></li>
+					  <li>Hometown: <strong>{{hometown}}</strong></li>
+					  <li>Tags: <strong>{{tags}}</strong></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-7 " >
+			<div class="thumbnail">
+					<div class="caption">
+						<form role="form" action="/scores?target={{name}}" method="post">
+							<div class="form-group">
+							   <ul class="list-inline">
+								  <li><input id="input-21d" name="stars" value="0" type="number" class="rating" min=0 max=5 step=1 data-size="sm"></li>
+								  <li><button type="reset" class="btn btn-warning btn-xs ">Reset</button></li>
+								</ul>   
+							</div>
+							<div class="clearfix"></div>
+							<div class="form-group">
+								<button type="submit" class="btn btn-danger">Change One</button>
+								<a href="/liked" class="btn btn-danger">Liked Ones</a>
+							</div>
+						</form>
+						<br>
+					</div>
+			</div>	
+		<script>
+			jQuery(document).ready(function () {
+				$(".rating-kv").rating();
+			});
+		</script>
+		</div>
+		
+		
+	</div>	

@@ -1,0 +1,57 @@
+<div class="container" style="width:60%">
+    
+	<h3 ><span class="glyphicon glyphicon-search"></span> Your Liked List</h3>
+	<div class="col-md-12 " >
+	        <div class="btn-group">
+	            <button class="btn btn-default btn-xs dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+	Select order condition <span class="caret"></span>
+	            </button>
+	            <ul class="dropdown-menu" role="menu">
+	                <li><a href="/liked?q=0">Range by rating from big to small</a></li>
+	                <li><a href="/liked?q=1">Range by rating from small to big</a></li>
+	                <li><a href="/liked?q=2">Range by age from big to small</a></li>
+	                <li><a href="/liked?q=3">Range by age from small to big</a></li>
+	            </ul>
+	        </div>
+		<div class="thumbnail">
+			<div class="caption">
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th style="width:1%"></th>
+							<th style="width:30%"><center>Personal Infomation</center></th>
+							<th style="width:30%"><center>Rating</center></th>
+							<th style="width:30%"></th>
+						</tr>
+					</thead>
+					<tbody>
+					{{#each lists}}
+						<tr>
+							<td><center><span class="glyphicon glyphicon-heart text-danger"></span></center></td>
+							<td>
+							    <center>
+							       Username: {{this.target}}<br>
+							       Age: {{this.age}}<br>
+							       Gender: {{this.gender}}<br>
+							       Occupation: {{this.occupation}}<br>
+							       Hometown: {{this.hometown}}<br>
+                                                               Tags: {{this.tags}}
+							    </center>
+							</td>
+							<td><center>
+							 {{#each this.score}}
+							    <span class='glyphicon glyphicon-star text-warning'></span>
+							 {{/each}}
+							</center></td>
+							<td><center><button type="button" class="btn btn-default">Message</button></center></td>
+						</tr>
+					{{/each}}
+					</tbody>
+				</table>
+			</div>
+		</div>	
+
+	</div>
+	
+	
+</div>	
